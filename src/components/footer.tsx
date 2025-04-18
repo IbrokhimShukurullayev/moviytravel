@@ -1,3 +1,5 @@
+import logo from "../assets/images/Moviy travel.svg";
+import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
@@ -6,45 +8,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="relative h-10 w-10 bg-white rounded-full p-2">
-                <svg
-                  viewBox="0 0 100 100"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-full h-full"
-                >
-                  {/* Birds */}
-                  <path
-                    d="M65 15 C67 13, 69 15, 71 13 C73 15, 75 13, 77 15"
-                    stroke="black"
-                    strokeWidth="0.5"
-                    fill="transparent"
-                  />
-
-                  {/* Sun */}
-                  <circle cx="70" cy="25" r="8" fill="#FF8C00" />
-
-                  {/* Mountains */}
-                  <path
-                    d="M20 50 L40 30 L50 40 L60 25 L70 35 L80 20 L90 40 L100 50 L20 50"
-                    fill="#00A651"
-                  />
-
-                  {/* Trees */}
-                  <path
-                    d="M20 50 L25 40 L27 42 L30 35 L33 42 L35 30 L38 42 L40 35 L45 45 L50 50 Z"
-                    fill="#00A651"
-                  />
-
-                  <path
-                    d="M80 50 L85 40 L87 42 L90 35 L93 42 L95 30 L98 42 L100 35 L105 45 L110 50 Z"
-                    fill="#00A651"
-                  />
-                </svg>
-              </div>
-              <div>
-                <span className="font-serif text-xl font-bold text-white">
-                  Moviy
-                </span>
-                <span className="text-green-400 text-xs ml-1">TRAVEL</span>
+                <Image src={logo} alt="logo0" />
               </div>
             </div>
             <p className="text-gray-400 mb-4">
