@@ -89,8 +89,8 @@ export default function Banner() {
           </div> */}
           <div className="relative bottom-0 md:bottom-12 left-0 right-0 mx-auto w-full max-w-6xl bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg z-20  md:absolute">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-              <div className="space-y-2 md:col-span-2">
-                <label className="text-sm font-medium text-gray-700">
+              <div>
+                <label className="block text-sm font-medium mb-1">
                   Ismingiz
                 </label>
                 <input
