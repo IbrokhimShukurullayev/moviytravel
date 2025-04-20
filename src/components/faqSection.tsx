@@ -246,7 +246,10 @@ export default function FAQSection() {
   const content = translations[currentLanguage];
 
   return (
-    <section className="w-full py-12 md:py-24 border-gray-300 bg-white">
+    <section
+      id="faq"
+      className="w-full py-12 md:py-24 border-gray-300 bg-white"
+    >
       <div className="container px-4 mx-auto md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="inline-block rounded-lg bg-green-500 px-3 py-1 text-sm text-white">
@@ -285,10 +288,10 @@ export default function FAQSection() {
               {content.contactUs}
             </a>
             <a
-              href="tel:+998901234567"
+              href="tel:+998991234214"
               className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
             >
-              {content.callUs}
+              Call us:+99899 123-42-14
             </a>
           </div>
         </div>

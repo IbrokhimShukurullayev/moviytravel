@@ -86,14 +86,17 @@ export default function About() {
   };
 
   return (
-    <div className="py-16 container mx-auto px-4">
+    <div id="about" className="py-16 container mx-auto px-4">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold mb-2">Biz haqimizda</h2>
         <p className="text-gray-600 max-w-3xl mx-auto">
-          Moviy Travel 2015 yildan beri O'zbekiston va xalqaro miqyosda sayohat
-          xizmatlarini taqdim etib kelmoqda. Bizning maqsadimiz mijozlarimizga
-          eng yaxshi sayohat tajribasini taqdim etish va ularning har bir
-          sayohatini unutilmas qilishdir.
+          2024 - yilda aprel oyida ochilgan Bir yildan beri ichki turizm va
+          tashqi turizm bo’yicha ishlab kelamiz Ichki turizm bo’yicha 3000 dan
+          ortiq mijozlarga hizmat ko’rsatdik ayni paytda ham haftasiga 100- 200
+          lab mijozlarga hizmat ko’rsatib ishinchlarini oqlab kelamiz Shu mamnun
+          mijozlar talabidan kelib chiqib tashqi turizm faoliyatiga urg’u
+          qaratishga qaror qildik Va biz dunyo bo’ylab sayohatlarga start berdik
+          Mijozlarimiz fikrlari bilan ham tanishishingiz mumkin
         </p>
       </div>
 
@@ -181,22 +184,22 @@ export default function About() {
         <div>
           <h3 className="text-2xl font-bold mb-4">Bizning tajribamiz</h3>
           <p className="text-gray-600 mb-4">
-            8 yillik faoliyatimiz davomida biz 10,000 dan ortiq mijozlarga
-            xizmat ko'rsatdik va 50 dan ortiq mamlakatga sayohatlarni tashkil
-            etdik. Bizning jamoamiz tajribali mutaxassislardan iborat bo'lib,
-            ular har bir mijozga individual yondashuvni ta'minlaydi.
+            1 yillik faoliyatimiz davomida biz 3,000 dan ortiq mijozlarga xizmat
+            ko'rsatdik va 10 dan ortiq mamlakatga sayohatlarni tashkil etdik.
+            Bizning jamoamiz tajribali mutaxassislardan iborat bo'lib, ular har
+            bir mijozga individual yondashuvni ta'minlaydi.
           </p>
           <div className="grid grid-cols-2 gap-4 mt-6">
             <div className="bg-green-50 p-4 rounded-lg text-center">
-              <h4 className="text-3xl font-bold text-green-600">10,000+</h4>
+              <h4 className="text-3xl font-bold text-green-600">3,000+</h4>
               <p className="text-gray-600">Mamnun mijozlar</p>
             </div>
             <div className="bg-green-50 p-4 rounded-lg text-center">
-              <h4 className="text-3xl font-bold text-green-600">50+</h4>
+              <h4 className="text-3xl font-bold text-green-600">10+</h4>
               <p className="text-gray-600">Sayohat yo'nalishlari</p>
             </div>
             <div className="bg-green-50 p-4 rounded-lg text-center">
-              <h4 className="text-3xl font-bold text-green-600">8+</h4>
+              <h4 className="text-3xl font-bold text-green-600">1+</h4>
               <p className="text-gray-600">Yillik tajriba</p>
             </div>
             <div className="bg-green-50 p-4 rounded-lg text-center">

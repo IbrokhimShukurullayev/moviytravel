@@ -2,6 +2,7 @@ import { Globe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../assets/images/Moviy travel.svg";
+import logos from "../assets/images/moviytravel without text.svg";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "../components/ui/button";
 import { Menu } from "lucide-react";
@@ -12,7 +13,7 @@ export default function Header() {
       <div className="container flex items-center justify-between mx-auto">
         <div className="flex  items-center gap-2">
           <div className="relative">
-            <Image width={80} height={40} src={logo} alt="logo" />
+            <Image width={100} height={40} src={logos} alt="logo" />
           </div>
         </div>
 
@@ -20,16 +21,28 @@ export default function Header() {
           <Link href="#" className="text-sm font-medium hover:text-green-600">
             Bosh sahifa
           </Link>
-          <Link href="#" className="text-sm font-medium hover:text-green-600">
+          <Link
+            href="#about"
+            className="text-sm font-medium hover:text-green-600"
+          >
             Biz haqimizda
           </Link>
-          <Link href="#" className="text-sm font-medium hover:text-green-600">
+          <Link
+            href="#card"
+            className="text-sm font-medium hover:text-green-600"
+          >
             Paketlar
           </Link>
-          <Link href="#" className="text-sm font-medium hover:text-green-600">
+          <Link
+            href="#faq"
+            className="text-sm font-medium hover:text-green-600"
+          >
             Savollar
           </Link>
-          <Link href="#" className="text-sm font-medium hover:text-green-600">
+          <Link
+            href="#cantact"
+            className="text-sm font-medium hover:text-green-600"
+          >
             Aloqa
           </Link>
         </nav>

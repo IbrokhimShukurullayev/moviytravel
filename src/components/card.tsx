@@ -21,7 +21,7 @@ import card2 from "../assets/images/card2.jpg";
 
 const Card = () => {
   return (
-    <div className="py-16 container mx-auto px-4">
+    <div id="card" className="py-16 container mx-auto px-4">
       <h2 className="text-3xl font-bold text-center mb-2">Mashhur manzillar</h2>
       <p className="text-center text-gray-600 mb-10">
         Butun dunyo sayohatchilari sevadigan eng ko'p so'raladigan

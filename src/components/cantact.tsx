@@ -1,6 +1,69 @@
+"use client";
+
+import React, { useState } from "react";
+const BOT_TOKEN = "7424974828:AAEOy8CEJwLaJ3XQYxYtLk9UXmVHbvpwZhg";
+const CHAT_ID = "-4267196528";
+
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
+    phone: "",
+  });
+
+  const handleChange = (e: any) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    const text = `
+📩 Yangi murojaat\n
+👤 Ism: ${formData.firstName} ${formData.lastName}\n
+📧 Email: ${formData.email}\n
+📝 Mavzu: ${formData.subject}\n
+💬 Xabar: ${formData.message}\n
+📞 Telefon: ${formData.phone}
+
+    `;
+
+    try {
+      const res = await fetch(
+        `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            chat_id: CHAT_ID,
+            text,
+          }),
+        }
+      );
+
+      if (res.ok) {
+        window.alert("✅ Xabaringiz yuborildi!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          subject: "",
+          message: "",
+          phone: "",
+        });
+      } else {
+        window.alert("❌ Xatolik yuz berdi");
+      }
+    } catch (err) {
+      window.alert("❗ Internetda muammo bor");
+    }
+  };
+
   return (
-    <div className="py-16 bg-gray-50">
+    <div id="cantact" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="transparent p-6 rounded-lg ">
@@ -36,7 +99,8 @@ export default function Contact() {
                 <div>
                   <h4 className="font-medium">Manzil</h4>
                   <p className="text-gray-600">
-                    123 Amir Temur ko'chasi, Tashkent, Uzbekistan
+                    Toshkent shahri, Yashnobod tumani, Fazogir MFY, Qorasuv
+                    ko'chasi, 11-uy, 17-xonadon
                   </p>
                 </div>
               </div>
@@ -60,7 +124,12 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-medium">Telefon</h4>
-                  <p className="text-gray-600">+998 90 123 45 67</p>
+                  <a href="tel:+998991244214" className="text-gray-600">
+                    +99899 124-42-14
+                  </a>
+                  <a href="tel:+998991234214" className="text-gray-600">
+                    +99899 123-42-14
+                  </a>
                 </div>
               </div>
 
@@ -83,7 +152,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-medium">Email</h4>
-                  <p className="text-gray-600">info@moviytravel.uz</p>
+                  <p className="text-gray-600">travelilyostravel@gmail.com</p>
                 </div>
               </div>
 
@@ -106,9 +175,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-medium">Ish vaqti</h4>
-                  <p className="text-gray-600">
-                    Dushanba - Shanba: 9:00 - 18:00
-                  </p>
+                  <p className="text-gray-600">Dushanba - Juma: 9:00 - 18:00</p>
                 </div>
               </div>
             </div>
@@ -117,33 +184,8 @@ export default function Contact() {
               <h4 className="font-medium mb-2">Ijtimoiy tarmoqlar</h4>
               <div className="flex gap-3">
                 <a
-                  href="#"
-                  className="bg-green-100 p-2 rounded-full hover:bg-green-200 transition-colors"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-600"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  className="bg-green-100 p-2 rounded-full hover:bg-green-200 transition-colors"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-600"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-                  </svg>
-                </a>
-                <a
-                  href="#"
+                  href="https://www.instagram.com/moviy_travel/"
+                  target="_blank"
                   className="bg-green-100 p-2 rounded-full hover:bg-green-200 transition-colors"
                 >
                   <svg
@@ -156,29 +198,17 @@ export default function Contact() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://t.me/moviytravel"
+                  target="_blank"
                   className="bg-green-100 p-2 rounded-full hover:bg-green-200 transition-colors"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5 text-green-600"
+                    viewBox="0 0 240 240"
                     fill="currentColor"
-                    viewBox="0 0 24 24"
                   >
-                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  className="bg-green-100 p-2 rounded-full hover:bg-green-200 transition-colors"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-600"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                    <path d="M120,0C53.73,0,0,53.73,0,120s53.73,120,120,120s120-53.73,120-120S186.27,0,120,0z M178.75,75.33l-24.36,114.74   c-1.83,8.56-6.66,10.65-13.51,6.64l-37.28-27.52l-17.98,17.3c-1.99,1.99-3.65,3.65-7.48,3.65l2.69-38.22l69.59-62.83   c3.02-2.69-0.66-4.18-4.66-1.49l-85.98,54.1l-37.02-11.57c-8.05-2.52-8.2-8.05,1.66-11.92l144.79-55.92   C174.36,62.59,181.67,66.04,178.75,75.33z" />
                   </svg>
                 </a>
               </div>
@@ -186,7 +216,7 @@ export default function Contact() {
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-bold mb-4">Xabar yuboring</h3>
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium mb-1">
@@ -194,6 +224,9 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    name="firstName"
                     placeholder="Ismingiz"
                     className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
@@ -204,6 +237,9 @@ export default function Contact() {
                   </label>
                   <input
                     type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    name="email"
                     placeholder="email@example.com"
                     className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
@@ -215,6 +251,9 @@ export default function Contact() {
                 </label>
                 <input
                   type="tel"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  name="phone"
                   placeholder="+998901234567"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 />
@@ -223,6 +262,9 @@ export default function Contact() {
                 <label className="block text-sm font-medium mb-1">Mavzu</label>
                 <input
                   type="text"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  name="subject"
                   placeholder="Xabar mavzusi"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 />
@@ -230,6 +272,9 @@ export default function Contact() {
               <div>
                 <label className="block text-sm font-medium mb-1">Xabar</label>
                 <textarea
+                  value={formData.message}
+                  onChange={handleChange}
+                  name="message"
                   className="w-full min-h-[120px] rounded-md border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   placeholder="Xabaringizni yozing..."
                 ></textarea>
