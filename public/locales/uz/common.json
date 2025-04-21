@@ -6,7 +6,140 @@
     "faq": "Savollar",
     "contact": "Aloqa",
     "call": "Hozir band qiling"
+  },
+  "banner": {
+    "badge": "Moviy Travel",
+    "title": "Yaxshi dam olish joyingizni kashf qiling!",
+    "description": "Qulayli, hashamat va unutilmas sarguzashtlarni bizning premium sayohat paketlarimiz bilan his eting",
+    "name": "Ismingiz",
+    "people": "Odamlar soni",
+    "tourType": "Sayohat turini tanlang",
+    "local": "Mahalliy sayohat",
+    "foreign": "Xorijiy sayohat",
+    "region": "Viloyat",
+    "country": "Mamlakat",
+    "phone": "Telefon raqam",
+    "search": "Paketlarni qidirish",
+    "success": "✅ So‘rovingiz muvaffaqiyatli yuborildi!",
+    "error": "❌ Xatolik yuz berdi. Qaytadan urinib ko‘ring.",
+    "network": "📡 Internet aloqasida muammo bor."
+  },
+  "card": {
+  "popular-destinations": "Mashhur manzillar",
+  "popular-destinations-desc": "Butun dunyo sayohatchilari sevadigan eng ko'p so'raladigan manzillarimizni o'rganing",
+  "details": "Batafsil",
+  "local-travel": "Mahalliy sayohat",
+  "international-travel": "Xalqaro sayohat",
+  "day-trip": "1-2 kunlik sayohat paketi",
+  "tour-package": "7 kunlik sayohat paketi",
+  "price-per-person": "kishi boshiga",
+  "book-now": "Bron qilish"
+},
+"about":{
+  "title": "Biz haqimizda",
+  "description": "2024 - yilda aprel oyida ochilgan Bir yildan beri ichki turizm va tashqi turizm bo’yicha ishlab kelamiz Ichki turizm bo’yicha 3000 dan ortiq mijozlarga hizmat ko’rsatdik ayni paytda ham haftasiga 100- 200 lab mijozlarga hizmat ko’rsatib ishinchlarini oqlab kelamiz Shu mamnun mijozlar talabidan kelib chiqib tashqi turizm faoliyatiga urg’u qaratishga qaror qildik Va biz dunyo bo’ylab sayohatlarga start berdik Mijozlarimiz fikrlari bilan ham tanishishingiz mumkin",
+  "abouts1": "Bizning qadriyatlarimiz",
+  "values": {
+    "quality": {
+      "title": "Sifat",
+      "description": "Biz har bir mijozimizga eng yuqori sifatli xizmatlarni taqdim etishga intilamiz."
+    },
+    "trust": {
+      "title": "Ishonchlilik",
+      "description": "Mijozlarimiz bizga ishonib topshirgan har bir sayohat uchun mas'uliyat bilan yondashamiz."
+    },
+    "innovation": {
+      "title": "Innovatsiya",
+      "description": "Biz doimo yangi yo'nalishlar va xizmatlarni taklif qilish uchun izlanishdamiz."
+    }
+  },
+  "experience": {
+    "title": "Bizning tajribamiz",
+    "description": "1 yillik faoliyatimiz davomida biz 3,000 dan ortiq mijozlarga xizmat ko'rsatdik va 10 dan ortiq mamlakatga sayohatlarni tashkil etdik. Bizning jamoamiz tajribali mutaxassislardan iborat bo'lib, ular har bir mijozga individual yondashuvni ta'minlaydi.",
+    "stats": {
+      "customers": "Mamnun mijozlar",
+      "locations": "Sayohat yo'nalishlari",
+      "years": "Yillik tajriba",
+      "support": "Mijozlarni qo'llab-quvvatlash"
+    }
+  },
+  "testimonials": {
+    "title": "Mijozlar va hamkorlar",
+    "description": "2024 - yilda aprel oyida ochilgan Bir yildan beri ichki turizm va tashqi turizm bo’yicha ishlab kelamiz Ichki turizm bo’yicha 3000 dan ortiq mijozlarga hizmat ko’rsatdik ayni paytda ham haftasiga 100- 200 lab mijozlarga hizmat ko’rsatib ishinchlarini oqlab kelamiz Shu mamnun mijozlar talabidan kelib chiqib tashqi turizm faoliyatiga urg’u qaratishga qaror qildik Va biz dunyo bo’ylab sayohatlarga start berdik Mijozlarimiz fikrlari bilan ham tanishishingiz mumkin"
   }
+},
+"contact": {
+  "new_message": "Yangi xabar",
+  "name": "Ism",
+  "email": "Elektron pochta",
+  "subject": "Mavzu",
+  "message": "Xabar",
+  "phone": "Telefon",
+  "send_message": "Xabar yuborish",
+  "send": "Yuborish",
+  "contact_us": "Biz bilan bog'laning",
+  "questions": "Savollaringiz bormi? Bizga xabar yuboring va biz tez orada siz bilan bog'lanamiz",
+  "first_name": "Ismingiz",
+  "internet_error": "❗ Internetda muammo bor",
+  "error": "❌ Xatolik yuz berdi",
+  "message_sent": "✅ Xabaringiz yuborildi!",
+  "con": "Ish vaqti",
+  "socila": "Ijtimoiy tarmoqlar"
+}
+,
+
+  "footer": {
+    "about": "Biz haqimizda",
+    "quickLinks": "Tezkor havolalar",
+    "popularDestinations": "Mashhur manzillar(Mahalliy)",
+    "localDestinations": "Mashhur manzillar(Xorijiy)",
+    "contact": "Bog'lanish",
+    "address": "Toshkent shahri, Yashnobod tumani, Fazogir MFY, Qorasuv ko'chasi, 11-uy, 17-xonadon",
+    "phone": "Telefon",
+    "email": "Elektron pochta",
+    "paymentMethods": "To'lov usullari",
+    "footerText": " Moviy Travel. Barcha huquqlar himoyalangan."
+  },
+  "faq":{
+  "faqTitle": "Ko‘p so‘raladigan savollar",
+  "faqSubtitle": "Sayohat paketlarimiz, bron qilish jarayoni va boshqalar haqida tez-tez so‘raladigan savollarga javoblar toping.",
+  "faqLabel": "Savollaringiz bormi?",
+  "questions": {
+    "q1": "Sayohat paketini qanday bron qilaman?",
+    "q2": "Qanday to‘lov usullarini qabul qilasiz?",
+    "q3": "Men o‘z bronimni o‘zgartirish yoki bekor qilishim mumkinmi?",
+    "q4": "Sayohat paketlaringizga nimalar kiradi?",
+    "q5": "Paket narxiga parvozlar kiradimi?",
+    "q6": "Manzilim uchun viza kerakmi?",
+    "q7": "Qanday sayohat sug‘urtasini tavsiya qilasiz?",
+    "q8": "Sayohat davomida gid bo‘ladimi?",
+    "q9": "Sayohatim davomida muammolarga duch kelsam nima bo‘ladi?",
+    "q10": "Siz moslashtirilgan sayohat paketlarini taklif qilasizmi?"
+  },
+  "answers": {
+    "a1": "Siz veb-saytimiz orqali o'zingiz xohlagan yo'nalish, sanalar va paket turini tanlab, sayohat paketini bron qilishingiz mumkin. Bron qilish jarayonini bajaring, kerakli ma'lumotlarni taqdim eting va to'lovni amalga oshiring.",
+    "a2": "Biz turli xil to'lov usullarini qabul qilamiz, jumladan kredit/debet kartalar (Visa, MasterCard, American Express), PayPal, bank o'tkazmalari va ba'zi yo'nalishlarda bo'lib-bo'lib to'lash imkoniyati.",
+    "a3": "Ha, siz bizning bekor qilish siyosatimizga muvofiq o'z bronlaringizni o'zgartirish yoki bekor qilishingiz mumkin.",
+    "a4": "Bizning sayohat paketlarimizga odatda turar joy, tanlangan ovqatlar, transport (shu jumladan aeroportdan transfer), yo'nalishda ko'rsatilgan sayohatlar va ro'yxatdagi diqqatga sazovor joylarga kirish uchun to'lovlar kiradi.",
+    "a5": "Bizning ko'pchilik paketlarimizga xalqaro parvozlar standart bo'yicha kiritilmagan, bu sizga sayohat tartiblaringizda moslashuvchanlik beradi.",
+    "a6": "Viza talablari sizning fuqaroligingiz va manzilingizga qarab farq qiladi. Biz umumiy ma'lumot taqdim etsak-da, eng so'nggi viza talablari uchun manzilingiz davlatining elchixonasi yoki konsulligiga murojaat qilishni tavsiya qilamiz.",
+    "a7": "Biz tibbiy favqulodda holatlar, sayohatni bekor qilish, yo'qolgan bagaj va boshqa kutilmagan hodisalarni qoplaydigan keng qamrovli sayohat sug'urtasini qattiq tavsiya qilamiz.",
+    "a8": "Bizning ko'pchilik paketlarimizga professional, ingliz tilida so'zlashuvchi gidlar (va so'rov bo'yicha boshqa tillardagi gidlar) kiradi.",
+    "a9": "Biz barcha sayohatchilar uchun 24/7 favqulodda yordam ko'rsatamiz. Siz jo'nashdan oldin har qanday vaqtda yordam so'rash uchun qo'ng'iroq qilishingiz mumkin.",
+    "a10": "Ha, biz sizning afzalliklaringiz, byudjetingiz va jadvalingizga moslashtirilgan sayohat tajribalarini yaratishga ixtisoslashganmiz."
+  },
+  "contact": {
+    "questions": "Hali ham savollaringiz bormi? Biz yordam berishga tayyormiz!",
+    "contact_us": "Biz bilan bog'laning",
+    "call_button": "Qo'ng'iroq qiling:"
+  }
+}
+
+
+
+
+
+  
 }
 
 

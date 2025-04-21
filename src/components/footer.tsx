@@ -4,8 +4,10 @@ import logo4 from "../assets/images/logo4.png";
 import payme from "../assets/images/payme.png";
 import Image from "next/image";
 import click from "../assets/images/cilik.png";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const [t, i18n] = useTranslation("global");
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -53,14 +55,14 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold text-lg mb-4">Tezkor havolalar</h3>
+            <h3 className="font-bold text-lg mb-4">{t("footer.quickLinks")}</h3>
             <ul className="space-y-2">
               <li>
                 <a
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Bosh sahifa
+                  {t("header.home")}
                 </a>
               </li>
               <li>
@@ -68,7 +70,7 @@ export default function Footer() {
                   href="#about"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Biz haqimizda
+                  {t("header.about")}
                 </a>
               </li>
               <li>
@@ -76,7 +78,7 @@ export default function Footer() {
                   href="#card"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Paketlar
+                  {t("header.packages")}
                 </a>
               </li>
               <li>
@@ -84,7 +86,7 @@ export default function Footer() {
                   href="#faq"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Savollar
+                  {t("header.faq")}
                 </a>
               </li>
               <li>
@@ -92,7 +94,7 @@ export default function Footer() {
                   href="#cantact"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Aloqa
+                  {t("header.contact")}
                 </a>
               </li>
             </ul>
@@ -100,7 +102,7 @@ export default function Footer() {
 
           <div>
             <h3 className="font-bold text-lg mb-4">
-              Mashhur manzillar (Xorijiy)
+              {t("footer.popularDestinations")}
             </h3>
             <ul className="space-y-2">
               <li>
@@ -148,7 +150,7 @@ export default function Footer() {
 
           <div>
             <h3 className="font-bold text-lg mb-4">
-              Mashhur manzillar (Mahaliy)
+              {t("footer.localDestinations")}
             </h3>
             <ul className="space-y-2">
               <li>
@@ -195,7 +197,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold text-lg mb-4">Bog'lanish</h3>
+            <h3 className="font-bold text-lg mb-4">{t("footer.contact")}</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <svg
@@ -218,10 +220,7 @@ export default function Footer() {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span className="text-gray-400">
-                  Toshkent shahri, Yashnobod tumani, Fazogir MFY, Qorasuv
-                  ko'chasi, 11-uy, 17-xonadon
-                </span>
+                <span className="text-gray-400">{t("footer.address")}</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg
@@ -239,7 +238,9 @@ export default function Footer() {
                   />
                 </svg>
                 <div>
-                  <h4 className="font-medium flex flex-col">Telefon</h4>
+                  <h4 className="font-medium flex flex-col">
+                    {t("footer.phone")}
+                  </h4>
                   <a href="tel:+998991244214" className="text-gray-400">
                     +998 (99) 124-42-14
                   </a>
@@ -274,7 +275,7 @@ export default function Footer() {
             </ul>
 
             <div className="mt-6">
-              <h4 className="font-medium mb-2">To'lov usullari</h4>
+              <h4 className="font-medium mb-2">{t("footer.paymentMethods")}</h4>
               <div className="flex gap-3">
                 <div className="bg-white p-1 rounded">
                   <Image width={40} src={click} alt="click" />
@@ -289,8 +290,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-10 pt-6 text-center text-gray-500">
           <p>
-            © {new Date().getFullYear()} Moviy Travel. Barcha huquqlar
-            himoyalangan.
+            © {new Date().getFullYear()} {t("footer.footerText")}
           </p>
         </div>
       </div>

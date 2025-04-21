@@ -5,6 +5,7 @@ import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/images/Moviy travel.svg";
 import nefrit from "../assets/images/nefritthum.jpg";
+import { useTranslation } from "react-i18next";
 
 type TestimonialVideo = {
   id: string;
@@ -17,6 +18,7 @@ type TestimonialVideo = {
 
 export default function About() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [t, i18n] = useTranslation("global");
 
   const testimonialVideos: TestimonialVideo[] = [
     {
@@ -87,21 +89,15 @@ export default function About() {
   return (
     <div id="about" className="py-16 container mx-auto px-4">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold mb-2">Biz haqimizda</h2>
+        <h2 className="text-3xl font-bold mb-2">{t("about.title")}</h2>
         <p className="text-gray-600 max-w-3xl mx-auto">
-          2024 - yilda aprel oyida ochilgan Bir yildan beri ichki turizm va
-          tashqi turizm bo’yicha ishlab kelamiz Ichki turizm bo’yicha 3000 dan
-          ortiq mijozlarga hizmat ko’rsatdik ayni paytda ham haftasiga 100- 200
-          lab mijozlarga hizmat ko’rsatib ishinchlarini oqlab kelamiz Shu mamnun
-          mijozlar talabidan kelib chiqib tashqi turizm faoliyatiga urg’u
-          qaratishga qaror qildik Va biz dunyo bo’ylab sayohatlarga start berdik
-          Mijozlarimiz fikrlari bilan ham tanishishingiz mumkin
+          {t("about.description")}
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         <div>
-          <h3 className="text-2xl font-bold mb-4">Bizning qadriyatlarimiz</h3>
+          <h3 className="text-2xl font-bold mb-4">{t("about.abouts1")}</h3>
           <ul className="space-y-4">
             <li className="flex items-start gap-3">
               <div className="bg-green-100 p-2 rounded-full mt-1">
@@ -121,10 +117,11 @@ export default function About() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-medium">Sifat</h4>
+                <h4 className="font-medium">
+                  {t("about.values.quality.title")}
+                </h4>
                 <p className="text-gray-600">
-                  Biz har bir mijozimizga eng yuqori sifatli xizmatlarni taqdim
-                  etishga intilamiz.
+                  {t("about.values.quality.description")}
                 </p>
               </div>
             </li>
@@ -146,10 +143,9 @@ export default function About() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-medium">Ishonchlilik</h4>
+                <h4 className="font-medium">{t("about.values.trust.title")}</h4>
                 <p className="text-gray-600">
-                  Mijozlarimiz bizga ishonib topshirgan har bir sayohat uchun
-                  mas'uliyat bilan yondashamiz.
+                  {t("about.values.trust.description")}
                 </p>
               </div>
             </li>
@@ -171,39 +167,47 @@ export default function About() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-medium">Innovatsiya</h4>
+                <h4 className="font-medium">
+                  {t("about.values.innovation.title")}
+                </h4>
                 <p className="text-gray-600">
-                  Biz doimo yangi yo'nalishlar va xizmatlarni taklif qilish
-                  uchun izlanishdamiz.
+                  {t("about.values.innovation.description")}
                 </p>
               </div>
             </li>
           </ul>
         </div>
         <div>
-          <h3 className="text-2xl font-bold mb-4">Bizning tajribamiz</h3>
+          <h3 className="text-2xl font-bold mb-4">
+            {t("about.experience.title")}
+          </h3>
           <p className="text-gray-600 mb-4">
-            1 yillik faoliyatimiz davomida biz 3,000 dan ortiq mijozlarga xizmat
-            ko'rsatdik va 10 dan ortiq mamlakatga sayohatlarni tashkil etdik.
-            Bizning jamoamiz tajribali mutaxassislardan iborat bo'lib, ular har
-            bir mijozga individual yondashuvni ta'minlaydi.
+            {t("about.experience.description")}
           </p>
           <div className="grid grid-cols-2 gap-4 mt-6">
             <div className="bg-green-50 p-4 rounded-lg text-center">
               <h4 className="text-3xl font-bold text-green-600">3,000+</h4>
-              <p className="text-gray-600">Mamnun mijozlar</p>
+              <p className="text-gray-600">
+                {t("about.experience.stats.customers")}
+              </p>
             </div>
             <div className="bg-green-50 p-4 rounded-lg text-center">
               <h4 className="text-3xl font-bold text-green-600">10+</h4>
-              <p className="text-gray-600">Sayohat yo'nalishlari</p>
+              <p className="text-gray-600">
+                {t("about.experience.stats.locations")}
+              </p>
             </div>
             <div className="bg-green-50 p-4 rounded-lg text-center">
               <h4 className="text-3xl font-bold text-green-600">1+</h4>
-              <p className="text-gray-600">Yillik tajriba</p>
+              <p className="text-gray-600">
+                {t("about.experience.stats.years")}
+              </p>
             </div>
             <div className="bg-green-50 p-4 rounded-lg text-center">
               <h4 className="text-3xl font-bold text-green-600">24/7</h4>
-              <p className="text-gray-600">Mijozlarni qo'llab-quvvatlash</p>
+              <p className="text-gray-600">
+                {t("about.experience.stats.support")}
+              </p>
             </div>
           </div>
         </div>
@@ -229,16 +233,11 @@ export default function About() {
                 />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold mb-3">Mijozlar va hamkorlar</h3>
+            <h3 className="text-2xl font-bold mb-3">
+              {t("about.testimonials.title")}
+            </h3>
             <p className="text-gray-600 mb-6">
-              2024 - yilda aprel oyida ochilgan Bir yildan beri ichki turizm va
-              tashqi turizm bo’yicha ishlab kelamiz Ichki turizm bo’yicha 3000
-              dan ortiq mijozlarga hizmat ko’rsatdik ayni paytda ham haftasiga
-              100- 200 lab mijozlarga hizmat ko’rsatib ishinchlarini oqlab
-              kelamiz Shu mamnun mijozlar talabidan kelib chiqib tashqi turizm
-              faoliyatiga urg’u qaratishga qaror qildik Va biz dunyo bo’ylab
-              sayohatlarga start berdik Mijozlarimiz fikrlari bilan ham
-              tanishishingiz mumkin
+              {t("about.testimonials.description")}
             </p>
             {/* <div className="flex gap-2">
               <button

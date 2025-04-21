@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Globe, Search, MapPin } from "lucide-react";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
+import { useTranslation } from "react-i18next";
 import {
   Select,
   SelectContent,
@@ -12,6 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../components/ui/select";
+
 import {
   Tabs,
   TabsContent,
@@ -36,26 +38,35 @@ import singapur from "../assets/images/singapur.jpg";
 import maldives from "../assets/images/madives.jpg";
 
 const Card = () => {
+  const [t, i18n] = useTranslation("global");
+
+  const handleChangeLanguage = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    i18n.changeLanguage(event.target.value);
+  };
   return (
     <div id="card" className="py-16 container mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center mb-2">Mashhur manzillar</h2>
+      <h2 className="text-3xl font-bold text-center mb-2">
+        {t("card.popular-destinations")}
+      </h2>
       <p className="text-center text-gray-600 mb-10">
-        Butun dunyo sayohatchilari sevadigan eng ko'p so'raladigan
-        manzillarimizni o'rganing
+        {t("card.popular-destinations-desc")}
       </p>
 
       <Tabs defaultValue="international" className="w-full">
         <div className="flex justify-center mb-8">
           <TabsList className="grid w-full max-w-md grid-cols-2">
             <TabsTrigger value="domestic" className="text-base">
-              Mahalliy sayohat
+              {t("card.local-travel")}
             </TabsTrigger>
             <TabsTrigger value="international" className="text-base">
-              Xalqaro sayohat
+              {t("card.international-travel")}
             </TabsTrigger>
           </TabsList>
         </div>
 
+        {/* Domestic Tourism Tab */}
         <TabsContent value="domestic" className="mt-0">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -130,7 +141,7 @@ const Card = () => {
                     <h3 className="font-bold">{destination.name}</h3>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">
-                    1-2 kunlik sayohat paketi
+                    {t("card.day-trip")}
                   </p>
                   <div className="flex justify-between items-center">
                     <div>
@@ -138,7 +149,7 @@ const Card = () => {
                         {destination.price} UZS
                       </span>
                       <span className="text-xs text-gray-500 block">
-                        kishi boshiga
+                        {t("card.price-per-person")}
                       </span>
                     </div>
                     <Button
@@ -151,7 +162,7 @@ const Card = () => {
                       size="sm"
                       className="text-green-600 border-green-600 hover:bg-green-50"
                     >
-                      Batafsil
+                      {t("card.details")}
                     </Button>
                   </div>
                 </div>
@@ -224,7 +235,7 @@ const Card = () => {
                     <h3 className="font-bold">{destination.name}</h3>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">
-                    7 kunlik sayohat paketi
+                    {t("card.tour-package")}
                   </p>
                   <div className="flex justify-between items-center">
                     <div>
@@ -232,7 +243,7 @@ const Card = () => {
                         {destination.price}
                       </span>
                       <span className="text-xs text-gray-500 block">
-                        kishi boshiga
+                        {t("card.price-per-person")}
                       </span>
                     </div>
                     <Button
@@ -245,7 +256,7 @@ const Card = () => {
                       size="sm"
                       className="text-green-600 border-green-600 hover:bg-green-50"
                     >
-                      Batafsil
+                      {t("card.details")}
                     </Button>
                   </div>
                 </div>
@@ -264,7 +275,7 @@ const Card = () => {
           }
           className="bg-green-500 hover:bg-green-600"
         >
-          Bron qilish
+          {t("card.book-now")}
         </Button>
       </div>
     </div>

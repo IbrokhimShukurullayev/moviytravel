@@ -6,6 +6,134 @@
     "faq": "Questions",
     "contact": "Contact",
     "call": "Book Now"
+  },
+  "banner": {
+    "badge": "Moviy Travel",
+    "title": "Discover your perfect vacation spot!",
+    "description": "Feel the comfort, luxury, and unforgettable adventures with our premium travel packages",
+    "name": "Your Name",
+    "people": "Number of People",
+    "tourType": "Select Tour Type",
+    "local": "Local Tour",
+    "foreign": "Foreign Tour",
+    "region": "Region",
+    "country": "Country",
+    "phone": "Phone Number",
+    "search": "Search Packages",
+    "success": "✅ Your request has been successfully sent!",
+    "error": "❌ An error occurred. Please try again.",
+    "network": "📡 There seems to be a network issue."
+  },
+  "card": {
+  "popular-destinations": "Popular Destinations",
+  "popular-destinations-desc": "Explore the most visited destinations loved by travelers worldwide.",
+  "details": "Details",
+  "local-travel": "Domestic Travel",
+  "international-travel": "International Travel",
+  "day-trip": "1-2 days trip package",
+  "tour-package": "7 days trip package",
+  "price-per-person": "per person",
+  "book-now": "Book Now"
+},
+"about":{
+  "title": "About Us",
+  "description": "We opened in April 2024 and have been working in domestic and international tourism for over a year. We have served more than 3,000 clients in domestic tourism and currently serve 100 to 200 clients weekly, justifying their trust. In response to the demand of our satisfied clients, we decided to focus on international tourism and started offering worldwide travel opportunities. You can also check the feedback from our clients.",
+  "abouts1": "Our values",
+  "values": {
+    "quality": {
+      "title": "Quality",
+      "description": "We strive to provide our clients with the highest quality services."
+    },
+    "trust": {
+      "title": "Reliability",
+      "description": "We approach each trip entrusted to us by our clients with responsibility."
+    },
+    "innovation": {
+      "title": "Innovation",
+      "description": "We are always searching for new destinations and services to offer."
+    }
+  },
+  "experience": {
+    "title": "Our Experience",
+    "description": "In our 1-year activity, we have served over 3,000 clients and organized trips to more than 10 countries. Our team consists of experienced specialists who ensure an individual approach to each client.",
+    "stats": {
+      "customers": "Satisfied Clients",
+      "locations": "Travel Destinations",
+      "years": "Year of Experience",
+      "support": "Customer Support"
+    }
+  },
+  "testimonials": {
+    "title": "Clients and Partners Feedback",
+    "description": "We opened in April 2024 and have been working in domestic and international tourism for over a year. We have served more than 3,000 clients in domestic tourism and currently serve 100 to 200 clients weekly, justifying their trust. In response to the demand of our satisfied clients, we decided to focus on international tourism and started offering worldwide travel opportunities. You can also check the feedback from our clients."
   }
+},
+"contact":{
+  "new_message": "New message",
+  "name": "Name",
+  "email": "Email",
+  "subject": "Subject",
+  "message": "Message",
+  "phone": "Phone",
+  "send_message": "Send message",
+  "send": "Send",
+  "contact_us": "Contact us",
+  "questions": "Have questions? Send us a message, and we'll get back to you shortly.",
+  "first_name": "First Name",
+  "internet_error": "❗ Internet issue",
+  "error": "❌ Something went wrong",
+  "message_sent": "✅ Your message has been sent",
+  "con": "Working time",
+  "socila": "Social networks"
+
+},
+
+"footer": {
+    "about": "About Us",
+    "quickLinks": "Quick Links",
+    "popularDestinations": "Popular Destinations(Local)",
+    "localDestinations": "Popular Destinations(Foreign)",
+    "contact": "Contact",
+    "address": "Tashkent, Yashnobod district, Fazogir MFY, Qorasuv street, 11, apartment 17",
+    "phone": "Phone",
+    "email": "Email",
+    "paymentMethods": "Payment Methods",
+    "footerText": " Moviy Travel. All rights reserved."
+  },
+  "faq":{
+  "faqTitle": "Frequently Asked Questions",
+  "faqSubtitle": "Find answers to frequently asked questions about our travel packages, booking process, and more.",
+  "faqLabel": "Got questions?",
+  "questions": {
+    "q1": "How do I book a travel package?",
+    "q2": "What payment methods do you accept?",
+    "q3": "Can I change or cancel my booking?",
+    "q4": "What’s included in your travel packages?",
+    "q5": "Do the package prices include flights?",
+    "q6": "Do I need a visa for my destination?",
+    "q7": "What type of travel insurance do you recommend?",
+    "q8": "Will there be a guide during the trip?",
+    "q9": "What if I encounter issues during my trip?",
+    "q10": "Do you offer customized travel packages?"
+  },
+  "answers": {
+    "a1": "You can book a travel package by selecting your desired destination, dates, and package type on our website. Complete the booking process, provide necessary details, and make the payment.",
+    "a2": "We accept various payment methods including credit/debit cards (Visa, MasterCard, American Express), PayPal, bank transfers, and installment payments for certain destinations.",
+    "a3": "Yes, you can change or cancel your bookings according to our cancellation policy.",
+    "a4": "Our travel packages typically include accommodation, selected meals, transportation, guided tours, and entrance fees to listed attractions.",
+    "a5": "Most of our packages do not include international flights as standard, giving you flexibility in arranging your own travel plans.",
+    "a6": "Visa requirements vary depending on your nationality and destination. Check with the embassy for the latest visa requirements.",
+    "a7": "We strongly recommend comprehensive travel insurance that covers medical emergencies, trip cancellation, lost luggage, and other unforeseen events.",
+    "a8": "Most of our packages include professional, English-speaking guides. For self-guided tours, we provide detailed information and emergency contact.",
+    "a9": "We provide 24/7 emergency assistance for all travelers. Contact us for any assistance needed.",
+    "a10": "Yes, we specialize in creating customized travel experiences based on your preferences, budget, and schedule."
+  },
+  "contact": {
+    "questions": "Got more questions? We're here to help!",
+    "contact_us": "Contact Us",
+    "call_button": "Call Us:"
+  }
+}
+
 }
 

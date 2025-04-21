@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Search } from "lucide-react";
+import { useTranslation } from "react-i18next"; // Qo‘shildi
 import bg from "../assets/images/bannerbgd.jpg";
 
 const BOT_TOKEN = "7424974828:AAEOy8CEJwLaJ3XQYxYtLk9UXmVHbvpwZhg";
@@ -10,6 +11,7 @@ const CHAT_ID = "-4267196528";
 
 export default function Banner() {
   const [tourType, setTourType] = useState("1");
+  const [t] = useTranslation("global");
 
   const foreignCountries = [
     { value: "dubai", label: "Dubay" },
@@ -46,12 +48,16 @@ export default function Banner() {
 
   const handleSubmit = async () => {
     const message = `
-🌍 Yangi sayohat so'rovi:\n
-📍 Yo'nalish: ${form.destination}\n
-📍 Tur: ${form.type === "2" ? "Xorijiy" : "Mahalliy"}\n
-👥 Odam soni: ${form.people}\n
-🗺️ ${form.type === "2" ? "Mamlakat" : "Viloyat"}: ${form.country}\n
-📞 Telefon: ${form.phone}
+🌍 ${t("banner.new-request")}:\n
+📍 ${t("banner.direction")}: ${form.destination}\n
+📍 ${t("banner.type")}: ${
+      form.type === "2" ? t("banner.foreign") : t("banner.local")
+    }\n
+👥 ${t("banner.people")}: ${form.people}\n
+🗺️ ${form.type === "2" ? t("banner.country") : t("banner.region")}: ${
+      form.country
+    }\n
+📞 ${t("banner.phone")}: ${form.phone}
     `;
 
     try {
@@ -68,7 +74,7 @@ export default function Banner() {
       );
 
       if (res.ok) {
-        window.alert("✅ So‘rovingiz muvaffaqiyatli yuborildi!");
+        window.alert(t("banner.success"));
         setForm({
           destination: "",
           people: "1",
@@ -78,10 +84,10 @@ export default function Banner() {
         });
         setTourType("1");
       } else {
-        window.alert("❌ Xatolik yuz berdi. Qaytadan urinib ko‘ring.");
+        window.alert(t("banner.error"));
       }
     } catch (error) {
-      window.alert("📡 Internet aloqasida muammo bor.");
+      window.alert(t("banner.connection-error"));
     }
   };
 
@@ -101,23 +107,21 @@ export default function Banner() {
               Moviy Travel
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white max-w-2xl mb-4">
-              Yaxshi dam olish joyingizni kashf qiling!
+              {t("banner.title")}
             </h1>
-            <p className="text-white max-w-xl">
-              Qulayli, hashamat va unutilmas sarguzashtlarni bizning premium
-              sayohat paketlarimiz bilan his eting
-            </p>
+            <p className="text-white max-w-xl">{t("banner.description")}</p>
           </div>
 
+          {/* Form qismi o‘zgarishsiz, faqat matnlar t("...") bilan o‘zgartirildi */}
           <div className="relative bottom-0 md:bottom-12 left-0 right-0 mx-auto w-full max-w-6xl bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg z-20 md:absolute">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               <div>
                 <label className="block text-sm font-medium mb-1">
-                  Ismingiz
+                  {t("banner.name")}
                 </label>
                 <input
                   type="text"
-                  placeholder="Ismingiz"
+                  placeholder={t("banner.name")}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   value={form.destination}
                   name="destination"
@@ -128,7 +132,7 @@ export default function Banner() {
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700">
-                  Odamlar soni
+                  {t("banner.people")}
                 </label>
                 <select
                   value={form.people}
@@ -146,21 +150,21 @@ export default function Banner() {
 
               <div>
                 <label className="block text-sm font-medium mb-1">
-                  Sayohat turini tanlang
+                  {t("banner.tourType")}
                 </label>
                 <select
                   className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   value={tourType}
                   onChange={handleTourTypeChange}
                 >
-                  <option value="1">Mahalliy sayohat</option>
-                  <option value="2">Xorijiy sayohat</option>
+                  <option value="1">{t("banner.local")}</option>
+                  <option value="2">{t("banner.foreign")}</option>
                 </select>
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700">
-                  {tourType === "2" ? "Mamlakat" : "Viloyat"}
+                  {tourType === "2" ? t("banner.country") : t("banner.region")}
                 </label>
                 <select
                   name="country"
@@ -180,7 +184,7 @@ export default function Banner() {
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700">
-                  Telefon raqam
+                  {t("banner.phone")}
                 </label>
                 <input
                   value={form.phone}
@@ -199,7 +203,7 @@ export default function Banner() {
                   className="mt-4 flex items-center bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
                 >
                   <Search className="h-4 w-4 mr-2" />
-                  Paketlarni qidirish
+                  {t("banner.search")}
                 </button>
               </div>
             </div>

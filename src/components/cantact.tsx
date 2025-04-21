@@ -1,10 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 const BOT_TOKEN = "7424974828:AAEOy8CEJwLaJ3XQYxYtLk9UXmVHbvpwZhg";
 const CHAT_ID = "-4267196528";
 
 export default function Contact() {
+  const [t, i18n] = useTranslation("global");
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -67,11 +70,10 @@ export default function Contact() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="transparent p-6 rounded-lg ">
-            <h2 className="text-3xl font-bold  mb-2">Biz bilan bog'laning</h2>
-            <p className=" text-gray-600 mb-5">
-              Savollaringiz bormi? Bizga xabar yuboring va biz tez orada siz
-              bilan bog'lanamiz
-            </p>
+            <h2 className="text-3xl font-bold  mb-2">
+              {t("contact.contact_us")}
+            </h2>
+            <p className=" text-gray-600 mb-5">{t("contact.questions")}</p>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <div className="bg-green-100 p-2 rounded-full">
@@ -97,11 +99,8 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-medium">Manzil</h4>
-                  <p className="text-gray-600">
-                    Toshkent shahri, Yashnobod tumani, Fazogir MFY, Qorasuv
-                    ko'chasi, 11-uy, 17-xonadon
-                  </p>
+                  <h4 className="font-medium">{t("contact.subject")}</h4>
+                  <p className="text-gray-600">{t("footer.address")}</p>
                 </div>
               </div>
 
@@ -123,7 +122,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-medium">Telefon</h4>
+                  <h4 className="font-medium">{t("footer.phone")}</h4>
                   <a href="tel:+998991244214" className="text-gray-600">
                     +998 (99) 124-42-14
                   </a>
@@ -152,7 +151,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-medium">Email</h4>
+                  <h4 className="font-medium">{t("footer.email")}</h4>
                   <p className="text-gray-600">travelilyostravel@gmail.com</p>
                 </div>
               </div>
@@ -175,14 +174,14 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-medium">Ish vaqti</h4>
+                  <h4 className="font-medium">{t("contact.con")}</h4>
                   <p className="text-gray-600">Dushanba - Juma: 9:00 - 18:00</p>
                 </div>
               </div>
             </div>
 
             <div className="mt-6">
-              <h4 className="font-medium mb-2">Ijtimoiy tarmoqlar</h4>
+              <h4 className="font-medium mb-2">{t("contact.socila")}</h4>
               <div className="flex gap-3">
                 <a
                   href="https://www.instagram.com/moviy_travel/"
@@ -216,12 +215,14 @@ export default function Contact() {
             </div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-bold mb-4">Xabar yuboring</h3>
+            <h3 className="text-xl font-bold mb-4">
+              {t("contact.send_message")}
+            </h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium mb-1">
-                    Ismingiz
+                    {t("contact.first_name")}
                   </label>
                   <input
                     type="text"
@@ -234,7 +235,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-1">
-                    Email
+                    {t("contact.email")}
                   </label>
                   <input
                     type="email"
@@ -248,7 +249,7 @@ export default function Contact() {
               </div>
               <div>
                 <label className="block text-sm font-medium mb-1">
-                  Telefon raqam
+                  {t("banner.phone")}
                 </label>
                 <input
                   type="tel"
@@ -260,7 +261,9 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">Mavzu</label>
+                <label className="block text-sm font-medium mb-1">
+                  {t("contact.subject")}
+                </label>
                 <input
                   type="text"
                   value={formData.subject}
@@ -271,7 +274,9 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">Xabar</label>
+                <label className="block text-sm font-medium mb-1">
+                  {t("contact.message")}
+                </label>
                 <textarea
                   value={formData.message}
                   onChange={handleChange}
@@ -281,7 +286,7 @@ export default function Contact() {
                 ></textarea>
               </div>
               <button className="w-full bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
-                Yuborish
+                {t("contact.send")}
               </button>
             </form>
           </div>
