@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { Globe, Search, MapPin } from "lucide-react";
@@ -18,6 +20,20 @@ import {
 } from "../components/ui/tabs";
 import card1 from "../assets/images/d65209f1-0218-450f-b28b-3c7c72cee23b.jpeg";
 import card2 from "../assets/images/card2.jpg";
+import zomin from "../assets/images/zomin.jpg";
+import nefrit from "../assets/images/nefrit.jpg";
+import koksu from "../assets/images/koksu.jpg";
+import turkiston from "../assets/images/turkiston.jpg";
+import chodak from "../assets/images/chodak.jpg";
+import laglan from "../assets/images/laglan.jpg";
+import karakoy from "../assets/images/qarakoy.jpg";
+import tailand from "../assets/images/tailand.jpg";
+import bali from "../assets/images/balis.webp";
+import turkey from "../assets/images/turkey.jpeg";
+import misr from "../assets/images/misr.avif";
+import malaziya from "../assets/images/malaziya.jpg";
+import singapur from "../assets/images/singapur.jpg";
+import maldives from "../assets/images/madives.jpg";
 
 const Card = () => {
   return (
@@ -40,52 +56,51 @@ const Card = () => {
           </TabsList>
         </div>
 
-        {/* Domestic Tourism Tab */}
         <TabsContent value="domestic" className="mt-0">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                name: "Samarkand",
-                price: "299,000",
+                name: "Zomin",
+                price: "550,000",
                 rating: 4.8,
-                image: card1,
+                image: zomin,
               },
               {
-                name: "Bukhara",
-                price: "349,000",
+                name: "Nefrit ko'li",
+                price: "390,000",
                 rating: 4.7,
-                image: card1,
+                image: nefrit,
               },
-              { name: "Khiva", price: "399,000", rating: 4.9, image: card1 },
+              { name: "Ko’ksu", price: "250,000", rating: 4.9, image: koksu },
               {
-                name: "Tashkent",
-                price: "199,000",
+                name: "Samarqand",
+                price: "380,000",
                 rating: 4.5,
                 image: card1,
               },
               {
-                name: "Fergana Valley",
-                price: "279,000",
+                name: "Turkiston",
+                price: "500,000",
                 rating: 4.6,
-                image: card1,
+                image: turkiston,
               },
               {
-                name: "Aral Sea",
-                price: "499,000",
+                name: "Namangan chodak",
+                price: "380,000",
                 rating: 4.4,
-                image: card1,
+                image: chodak,
               },
               {
-                name: "Chimgan Mountains",
-                price: "249,000",
+                name: "Laglan Kanyoni, Qirg’iziston",
+                price: "350,000",
                 rating: 4.7,
-                image: card1,
+                image: laglan,
               },
               {
-                name: "Nurata",
-                price: "329,000",
+                name: "Kara Koy, Qirg’iziston",
+                price: "350,000",
                 rating: 4.5,
-                image: card1,
+                image: karakoy,
               },
             ].map((destination) => (
               <div
@@ -115,7 +130,7 @@ const Card = () => {
                     <h3 className="font-bold">{destination.name}</h3>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">
-                    3 kunlik sayohat paketi
+                    1-2 kunlik sayohat paketi
                   </p>
                   <div className="flex justify-between items-center">
                     <div>
@@ -128,6 +143,11 @@ const Card = () => {
                     </div>
                     <Button
                       variant="outline"
+                      onClick={() =>
+                        document
+                          .getElementById("cantact")
+                          ?.scrollIntoView({ behavior: "smooth" })
+                      }
                       size="sm"
                       className="text-green-600 border-green-600 hover:bg-green-50"
                     >
@@ -140,7 +160,6 @@ const Card = () => {
           </div>
         </TabsContent>
 
-        {/* International Tourism Tab */}
         <TabsContent value="international" className="mt-0">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -149,33 +168,33 @@ const Card = () => {
                 name: "Thailand",
                 price: "$1,499",
                 rating: 4.7,
-                image: card2,
+                image: tailand,
               },
               {
                 name: "Indonesia",
                 price: "$1,699",
                 rating: 4.9,
-                image: card2,
+                image: bali,
               },
-              { name: "Turkey", price: "$899", rating: 4.6, image: card2 },
-              { name: "Egypt", price: "$1,099", rating: 4.5, image: card2 },
+              { name: "Turkey", price: "$899", rating: 4.6, image: turkey },
+              { name: "Egypt", price: "$1,099", rating: 4.5, image: misr },
               {
                 name: "Malaysia",
                 price: "$1,399",
                 rating: 4.7,
-                image: card2,
+                image: malaziya,
               },
               {
                 name: "Singapore",
                 price: "$1,599",
                 rating: 4.8,
-                image: card2,
+                image: singapur,
               },
               {
                 name: "Maldives",
                 price: "$2,299",
                 rating: 4.9,
-                image: card2,
+                image: maldives,
               },
             ].map((destination) => (
               <div
@@ -218,6 +237,11 @@ const Card = () => {
                     </div>
                     <Button
                       variant="outline"
+                      onClick={() =>
+                        document
+                          .getElementById("cantact")
+                          ?.scrollIntoView({ behavior: "smooth" })
+                      }
                       size="sm"
                       className="text-green-600 border-green-600 hover:bg-green-50"
                     >
@@ -232,8 +256,15 @@ const Card = () => {
       </Tabs>
 
       <div className="flex justify-center mt-10">
-        <Button className="bg-green-500 hover:bg-green-600">
-          Barcha manzillarni ko'rish
+        <Button
+          onClick={() =>
+            document
+              .getElementById("cantact")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="bg-green-500 hover:bg-green-600"
+        >
+          Bron qilish
         </Button>
       </div>
     </div>

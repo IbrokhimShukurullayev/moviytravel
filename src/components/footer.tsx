@@ -1,5 +1,6 @@
 import logo from "../assets/images/Moviy travel.svg";
 import logos from "../assets/images/moviytravel without text.svg";
+import logo4 from "../assets/images/logo4.png";
 import payme from "../assets/images/payme.png";
 import Image from "next/image";
 import click from "../assets/images/cilik.png";
@@ -12,7 +13,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="relative  rounded-full p-2">
-                <Image width={100} height={40} src={logos} alt="logo0" />
+                <Image width={170} height={40} src={logo4} alt="logo0" />
               </div>
             </div>
             <p className="text-gray-400 mb-4">
@@ -155,7 +156,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Samarqand
+                  Zomin
                 </a>
               </li>
               <li>
@@ -163,7 +164,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Fargona
+                  Nefrit ko'li
                 </a>
               </li>
               <li>
@@ -171,7 +172,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Andijon
+                  Ko’ksu
                 </a>
               </li>
               <li>
@@ -179,7 +180,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Jizzax
+                  Namangan chodak
                 </a>
               </li>
               <li>
@@ -187,7 +188,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Sirdaryo
+                  Kara Koy, Qirg’iziston
                 </a>
               </li>
             </ul>
@@ -240,11 +241,11 @@ export default function Footer() {
                 <div>
                   <h4 className="font-medium flex flex-col">Telefon</h4>
                   <a href="tel:+998991244214" className="text-gray-400">
-                    +99899 124-42-14
+                    +998 (99) 124-42-14
                   </a>
                   <br />
                   <a href="tel:+998991234214" className="text-gray-400">
-                    +99899 123-42-14
+                    +998 (99) 123-42-14
                   </a>
                 </div>
               </li>

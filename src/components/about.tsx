@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/images/Moviy travel.svg";
+import nefrit from "../assets/images/nefritthum.jpg";
 
 type TestimonialVideo = {
   id: string;
@@ -21,44 +22,42 @@ export default function About() {
     {
       id: "video1",
       videourl: "/video/videos.mp4",
-      thumbnail: "/placeholder.svg?height=400&width=600&text=Dubai+Trip",
+      thumbnail: "/images/tovoqsoy.jpg",
       title: "Dubai sayohati haqida",
       customer: "Aziz Karimov",
       location: "Toshkent",
     },
     {
       id: "video2",
-      videourl: "/video/videos.mp4",
-
-      thumbnail:
-        "/placeholder.svg?height=400&width=600&text=Thailand+Experience",
+      videourl: "/video/moviy.mp4",
+      thumbnail: "/images/toq.jpg",
       title: "Tha/video/videos.mp4iland tajribasi",
       customer: "Nilufar Sobirova",
       location: "Samarqand",
     },
     {
       id: "video3",
-      videourl: "/video/videos.mp4",
+      videourl: "/video/lolazor.mp4",
 
-      thumbnail: "/placeholder.svg?height=400&width=600&text=Turkey+Holiday",
+      thumbnail: "/images/lola.jpg",
       title: "Turkiya ta'tili",
       customer: "Jahongir Aliyev",
       location: "Buxoro",
     },
     {
       id: "video4",
-      videourl: "/video/videos.mp4",
+      videourl: "/video/nefrit.mp4",
 
-      thumbnail: "/placeholder.svg?height=400&width=600&text=Samarkand+Tour",
+      thumbnail: "/images/nefrits.jpg",
       title: "Samarqand sayohati",
       customer: "Dilnoza Rahimova",
       location: "Toshkent",
     },
     {
       id: "video5",
-      videourl: "/video/videos.mp4",
+      videourl: "/video/oyin.mp4",
 
-      thumbnail: "/placeholder.svg?height=400&width=600&text=Egypt+Adventure",
+      thumbnail: "/images/toqq.jpg",
       title: "Misr sarguzashti",
       customer: "Bobur Mahmudov",
       location: "Farg'ona",
@@ -232,14 +231,14 @@ export default function About() {
             </div>
             <h3 className="text-2xl font-bold mb-3">Mijozlar va hamkorlar</h3>
             <p className="text-gray-600 mb-6">
-              Moviy Travel mijozlari va hamkorlari biz bilan bo'lgan
-              tajribalarini baham ko'rishadi. Ularning fikrlari bizning
-              xizmatlarimizni yanada yaxshilashga yordam beradi.
-            </p>
-            <p className="text-gray-600 mb-6">
-              Moviy Travel mijozlari va hamkorlari biz bilan bo'lgan
-              tajribalarini baham ko'rishadi. Ularning fikrlari bizning
-              xizmatlarimizni yanada yaxshilashga yordam beradi.
+              2024 - yilda aprel oyida ochilgan Bir yildan beri ichki turizm va
+              tashqi turizm bo’yicha ishlab kelamiz Ichki turizm bo’yicha 3000
+              dan ortiq mijozlarga hizmat ko’rsatdik ayni paytda ham haftasiga
+              100- 200 lab mijozlarga hizmat ko’rsatib ishinchlarini oqlab
+              kelamiz Shu mamnun mijozlar talabidan kelib chiqib tashqi turizm
+              faoliyatiga urg’u qaratishga qaror qildik Va biz dunyo bo’ylab
+              sayohatlarga start berdik Mijozlarimiz fikrlari bilan ham
+              tanishishingiz mumkin
             </p>
             {/* <div className="flex gap-2">
               <button

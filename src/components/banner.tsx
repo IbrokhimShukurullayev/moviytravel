@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Search } from "lucide-react";
-import bg from "../assets/images/bgd.jpg";
+import bg from "../assets/images/bannerbgd.jpg";
 
 const BOT_TOKEN = "7424974828:AAEOy8CEJwLaJ3XQYxYtLk9UXmVHbvpwZhg";
 const CHAT_ID = "-4267196528";

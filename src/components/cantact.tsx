@@ -125,10 +125,11 @@ export default function Contact() {
                 <div>
                   <h4 className="font-medium">Telefon</h4>
                   <a href="tel:+998991244214" className="text-gray-600">
-                    +99899 124-42-14
+                    +998 (99) 124-42-14
                   </a>
+                  <br />
                   <a href="tel:+998991234214" className="text-gray-600">
-                    +99899 123-42-14
+                    +998 (99) 123-42-14
                   </a>
                 </div>
               </div>

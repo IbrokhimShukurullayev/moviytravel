@@ -282,8 +282,8 @@ export default function FAQSection() {
           <p className="text-gray-500 mb-4">{content.stillHaveQuestions}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="#contact"
-              className="inline-flex h-10 items-center justify-center rounded-md bg-green-500 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-cyan-600 focus-visible:outline-none focus-visible:ring-1"
+              href="#cantact"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-green-500 px-8 text-sm font-medium text-white shadow transition-colors focus-visible:outline-none focus-visible:ring-1"
             >
               {content.contactUs}
             </a>
@@ -291,7 +291,7 @@ export default function FAQSection() {
               href="tel:+998991234214"
               className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
             >
-              Call us:+99899 123-42-14
+              Biz bilan bog'laning:+998 (99) 123-42-14
             </a>
           </div>
         </div>
