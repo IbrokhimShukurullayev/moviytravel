@@ -18,10 +18,7 @@ export default function Footer() {
                 <Image width={170} height={40} src={logo4} alt="logo0" />
               </div>
             </div>
-            <p className="text-gray-400 mb-4">
-              Moviy Travel sizning sayohat tajribangizni unutilmas qilish uchun
-              premium sayohat xizmatlarini taqdim etadi.
-            </p>
+            <p className="text-gray-400 mb-4">{t("footer.footers")}</p>
             <div className="flex gap-3">
               <a
                 href="https://www.instagram.com/moviy_travel/"

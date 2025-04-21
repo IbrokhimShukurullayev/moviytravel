@@ -84,7 +84,9 @@
   "error": "❌ Xatolik yuz berdi",
   "message_sent": "✅ Xabaringiz yuborildi!",
   "con": "Ish vaqti",
-  "socila": "Ijtimoiy tarmoqlar"
+  "socila": "Ijtimoiy tarmoqlar",
+  "jk": "Xabar mavzusi",
+  "abg":"Xabaringizni yozing..."
 }
 ,
 
@@ -98,7 +100,8 @@
     "phone": "Telefon",
     "email": "Elektron pochta",
     "paymentMethods": "To'lov usullari",
-    "footerText": " Moviy Travel. Barcha huquqlar himoyalangan."
+    "footerText": " Moviy Travel. Barcha huquqlar himoyalangan.",
+    "footers": "Moviy Travel sizning sayohat tajribangizni unutilmas qilish uchun premium sayohat xizmatlarini taqdim etadi."
   },
   "faq":{
   "faqTitle": "Ko‘p so‘raladigan savollar",

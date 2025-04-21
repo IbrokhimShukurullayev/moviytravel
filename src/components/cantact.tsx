@@ -229,7 +229,7 @@ export default function Contact() {
                     value={formData.firstName}
                     onChange={handleChange}
                     name="firstName"
-                    placeholder="Ismingiz"
+                    placeholder={t("contact.first_name")}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
                 </div>
@@ -269,7 +269,7 @@ export default function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   name="subject"
-                  placeholder="Xabar mavzusi"
+                  placeholder={t("contact.jk")}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 />
               </div>
@@ -282,7 +282,7 @@ export default function Contact() {
                   onChange={handleChange}
                   name="message"
                   className="w-full min-h-[120px] rounded-md border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                  placeholder="Xabaringizni yozing..."
+                  placeholder={t("contact.abg")}
                 ></textarea>
               </div>
               <button className="w-full bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">

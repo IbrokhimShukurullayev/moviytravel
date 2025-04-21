@@ -84,7 +84,10 @@
   "error": "❌ Something went wrong",
   "message_sent": "✅ Your message has been sent",
   "con": "Working time",
-  "socila": "Social networks"
+  "socila": "Social networks",
+  "jk": "Message subject",
+  "abg":"Write your message..."
+
 
 },
 
@@ -98,7 +101,8 @@
     "phone": "Phone",
     "email": "Email",
     "paymentMethods": "Payment Methods",
-    "footerText": " Moviy Travel. All rights reserved."
+    "footerText": " Moviy Travel. All rights reserved.",
+    "footers": "Moviy Travel provides premium travel services to make your travel experience unforgettable."
   },
   "faq":{
   "faqTitle": "Frequently Asked Questions",
