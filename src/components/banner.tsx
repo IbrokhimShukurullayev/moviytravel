@@ -49,8 +49,8 @@ export default function Banner() {
   const handleSubmit = async () => {
     const message = `
 🌍 ${t("contact.new_message")}:\n
-📍 ${t("banner.direction")}: ${form.destination}\n
-📍 ${t("banner.type")}: ${
+📍 ${t("banner.name")}: ${form.destination}\n
+📍 ${t("banner.tourType")}: ${
       form.type === "2" ? t("banner.foreign") : t("banner.local")
     }\n
 👥 ${t("banner.people")}: ${form.people}\n
