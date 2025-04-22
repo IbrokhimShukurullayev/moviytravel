@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-const BOT_TOKEN = "7424974828:AAEOy8CEJwLaJ3XQYxYtLk9UXmVHbvpwZhg";
-const CHAT_ID = "-4267196528";
+const BOT_TOKEN = "7522239457:AAHTSgzT2n48lnDU4RhwYTsLysoLIelkbSI";
+const CHAT_ID = "-1002180572908";
 
 export default function Contact() {
   const [t, i18n] = useTranslation("global");

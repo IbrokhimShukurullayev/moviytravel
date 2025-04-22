@@ -6,8 +6,8 @@ import { Search } from "lucide-react";
 import { useTranslation } from "react-i18next"; // Qo‘shildi
 import bg from "../assets/images/bannerbgd.jpg";
 
-const BOT_TOKEN = "7424974828:AAEOy8CEJwLaJ3XQYxYtLk9UXmVHbvpwZhg";
-const CHAT_ID = "-4267196528";
+const BOT_TOKEN = "7522239457:AAHTSgzT2n48lnDU4RhwYTsLysoLIelkbSI";
+const CHAT_ID = "-1002180572908";
 
 export default function Banner() {
   const [tourType, setTourType] = useState("1");
@@ -48,7 +48,7 @@ export default function Banner() {
 
   const handleSubmit = async () => {
     const message = `
-🌍 ${t("banner.new-request")}:\n
+🌍 ${t("contact.new_message")}:\n
 📍 ${t("banner.direction")}: ${form.destination}\n
 📍 ${t("banner.type")}: ${
       form.type === "2" ? t("banner.foreign") : t("banner.local")
